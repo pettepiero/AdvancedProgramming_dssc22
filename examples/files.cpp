@@ -5,6 +5,7 @@ int main(){
     //you can do the same things as with std::cout and std::cin
 
     //this will create "test.txt" if it doesn't exist or overwrite if it does
+    //OutputFilestream
     std::ofstream filevar("test.txt");
     //filvar.open("name.txt")
     filevar << "1 2 3"<<std::endl;
