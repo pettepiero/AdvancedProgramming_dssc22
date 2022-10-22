@@ -1,12 +1,14 @@
 #include <iostream>
-#include <string>
+//#include <string>
 
 int main(){
     std::string name;
     int n{0};
     int N[4];
+    //std::cout << "Address of string name before assignment: " << &name << std::endl;
     std::cout<<"What is your name?"<<std::endl;
     std::cin >> name;
+    //std::cout << "Address of string name after assignment: " << &name << std::endl;
     std::cout << "Hello, "<< name<< "! Whats is your favorite number?"<< std::endl;
     std::cin >>n;
     std::cout<< "The square of your favorite number is: "<<n*n<<std::endl;

@@ -7,12 +7,15 @@ OBJDIR=obj
 CFLAGS= -c -I$(INCDIR)
 OBJECTS= main.o $(OBJDIR)/hello.o
 
+#$@ = target -> in this case it will be replaced by hello.x
 hello.x: $(OBJECTS)
 	$(CC) $(OBJECTS) -o $@
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp
+
+#inside obj/ all the files with extension .o will be considered
+#i think "$^" copies the dependencies above
 obj/%.o: src/%.cpp  
 	$(CC) $(CFLAGS) $^ -o $@
 clean:
-	rm -rf *.o *.x
- 
+	rm -rf obj/*.o *.x
