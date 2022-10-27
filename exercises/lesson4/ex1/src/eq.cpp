@@ -1,6 +1,7 @@
-#include <iostream>
+#include "coeffs.hpp"
+#include "eq.hpp"
 #include <cmath>
-#include "quadeq.hpp"
+#include <iostream>
 
 void CQuadratic_Equation::solve() {
     double discr = coeffs.b*coeffs.b - 4*coeffs.a*coeffs.c;
@@ -26,21 +27,4 @@ void CQuadratic_Equation::print_solution() {
     std::cout<<"solutions are: "<<sol1.r << " + i*" <<sol1.im<<std::endl;
     std::cout<<sol2.r << " + i*" <<sol2.im<<std::endl;
 }
-
-void CQuadratic_Equation::write_file(){
-    std::ofstream outputFile("solution_history.txt");
-    outputFile.close();
-    if(outputFile){
-        std::cout << "Writing solutions in solution_history.txt..." << std::endl;
-        outputFile.open("solution_history.txt", std::ios_base::app);
-        outputFile  << "(" << sol1.r 
-                    << ", " << sol1.im << ") " 
-                    << "(" << sol2.r
-                    << ", " << sol2.im << ")" << std::endl;
-        outputFile.close();
-        std::cout << "Done." << std::endl;
-    } else {
-        std::cout << "solution_history.txt doesn't exist." << std::endl;
-    }
-
-}
+ 

@@ -16,6 +16,8 @@ public:
     
 };
 
+//Video 17:22 pm
+
 template<typename T> 
     CMyClass<T>::CMyClass(const int& N) {
     data=new T[N];
@@ -83,6 +85,7 @@ if (this != &p) {
 		delete[] data;
     }	
     data=p.data;
+    //This line is crucial now
     p.data=nullptr;
 
 	

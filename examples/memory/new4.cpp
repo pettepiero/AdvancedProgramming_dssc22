@@ -92,6 +92,12 @@ if (this != &p) {
 
 
 //nonsense function to see what happens 
+//the copy constructor is called when you pass something by value to a function
+//or manually calling it like in the main. FROM NOW ON, IF YOU MAKE THE DESTRUCTOR
+//YOU SHOULD ALSO CREATE THE ASSIGNMENT OPERATOR AND THE COPY CONSTRUCTOR. + video at 17:21 pm
+//If you have any dynamic data memory in the class, to be safe use "=delete;" because it will
+//save you some nasty bugs
+
 template <typename T>
 void a_function(CMyClass<T> obj){
     std::cout<<obj.size<<std::endl;

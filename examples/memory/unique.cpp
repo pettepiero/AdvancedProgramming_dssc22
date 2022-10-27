@@ -1,7 +1,9 @@
 #include <iostream>
 #include <memory>
 
-
+/*	Smart pointers (unique_ptr) will delete for us
+ *	
+ */
 void function(int* p){
     std::cout<<p<<std::endl;
 }

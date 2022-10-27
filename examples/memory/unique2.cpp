@@ -18,7 +18,7 @@ public:
 
 template<typename T> 
     CMyClass<T>::CMyClass(const int& N) {
-    //instead of new    
+    //instead of new, N is the size that we want    
     data=std::make_unique<int[]>(N);
     size=N;
     for(int i=0;i<N;i++){
@@ -45,6 +45,7 @@ CMyClass<T>& CMyClass<T>::operator=(const CMyClass<T>& p){
 if (this != &p) { 
 //copy non-dynamic variables
 	size=p.size;
+	//reset will delete old data and allocate new data
     data.reset(new T[size]);
     for(int i=0;i<size;i++){
         data[i]=p.data[i];
@@ -62,6 +63,7 @@ if (this != &p) {
 //copy non-dynamic variables
 	size=p.size;
     p.size=0;
+    //this is already implemented
     data=std::move(p.data);
 }//of checking for self-assignment
 return *this;

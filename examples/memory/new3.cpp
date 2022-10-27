@@ -87,6 +87,8 @@ int main(){
     CMyClass<int> obj(10);
     CMyClass<int> obj2(10);
    //THIS ACTUALLY NEVER CALLS ASSIGNMENT OPERATOR! 
+   //It directly creats obj3 with the content. The compiler is
+   //smart enought to understand it.
     auto obj3=obj2+obj;
     obj3.print();
     return 0;

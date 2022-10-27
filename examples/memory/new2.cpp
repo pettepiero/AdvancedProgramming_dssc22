@@ -8,6 +8,7 @@ public:
     CMyClass(const int& N);
     ~CMyClass();
     void print();
+    //Right side of the assignment operator has to be const because it can't change (in general in ass. op)
   //  CMyClass& operator=(const CMyClass& p);
     
 };
