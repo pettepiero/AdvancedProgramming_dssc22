@@ -59,8 +59,6 @@ CComplex<T> CComplex<T>::operator* ( const CComplex<T>& var ) {
     return result;
 }
 
-
-
 int main(){
     
   CComplex<double> a(1,2),b(3,4);  

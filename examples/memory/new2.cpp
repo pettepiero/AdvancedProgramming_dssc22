@@ -9,8 +9,7 @@ public:
     ~CMyClass();
     void print();
     //Right side of the assignment operator has to be const because it can't change (in general in ass. op)
-  //  CMyClass& operator=(const CMyClass& p);
-    
+    CMyClass& operator=(const CMyClass& p);
 };
 
 template<typename T> 
@@ -34,12 +33,12 @@ template<typename T>
 
 template<typename T> 
 void CMyClass<T>::print() {
-     for(int i=0;i<size;i++){
+     for(int i=0;i<(int)size;i++){
         std::cout<<data[i]<<" ";
     }
     std::cout<<std::endl;   
 }
-/*
+
 template <typename T>
 CMyClass<T>& CMyClass<T>::operator=(const CMyClass<T>& p){
     std::cout<<"assignment operator called"<<std::endl;
@@ -56,15 +55,15 @@ if (this != &p) {
 	if(p.data==nullptr){data=nullptr;}
 	else{
 		data = new T[size];
-		for(int i=0;i<size;i++){
+		for(int i=0;i<(int)size;i++){
 			data[i]=p.data[i];
-        };
+        	}
 	}//else
 	
 }//of cheking for self-assignement
 return *this;
 };
-*/
+
 
 int main(){
    

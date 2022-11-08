@@ -7,7 +7,7 @@
 int main(){
     //it's nice to first tell the user what your program is doing
     std::cout<<"This program solves a quadratic equation "<<std::endl;
-    CQuadratic_Equation eq;
+    CQuadratic_Equation<double> eq;
     eq.coeffs.ask_for_input();
     eq.coeffs.print();
     eq.solve();

@@ -13,8 +13,7 @@ public:
     T* data;
     MyClass(){};
     MyClass(const int& N);
-    /* This is a destructor. It is the function that is being called 
-     * it needs the same name as the class, with the ~ (?) not sure about this
+     /*Destructor: it needs the same name as the class, with the ~ (?) not sure about this
      */
     ~MyClass();
 };
@@ -30,7 +29,7 @@ template<typename T>
 //Destructor function
 // It is called automatically when your object is about to die
 // (like when the main ends, or its scope is finished)
-// You can't even call the destructor
+// You can't even call the destructor manually
 template<typename T> 
     MyClass<T>::~MyClass() {
     delete[] data; //this line frees the memory
@@ -61,7 +60,9 @@ int main(){
     delete[] p; 
     
     MyClass<int> obj(10);
-    
+    MyClass<int> obj1(10);
+
+    obj=obj1;
     
     return 0;
 }

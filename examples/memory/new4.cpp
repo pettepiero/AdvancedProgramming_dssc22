@@ -11,7 +11,6 @@ public:
     CMyClass& operator=(const CMyClass& p);
     CMyClass operator+(const CMyClass& p);
     CMyClass(const CMyClass& p);
-    
 };
 
 template<typename T> 
@@ -129,8 +128,7 @@ int main(){
     a_function(obj);
     //another use of copy constructor
     CMyClass<int> obj4(obj3);
-    
-    
+   //Also this doesn't call copy operator! 
     CMyClass<int> obj5(obj3+obj2);
     return 0;
 }
