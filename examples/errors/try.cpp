@@ -2,6 +2,8 @@
 #include <cmath>
 #include <memory>
 
+//const -> it is not allowed to change the variable
+//noexcept -> tells the compiler that ?
 
 class CMyException: public std::exception{
   const char* what() const noexcept override{

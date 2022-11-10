@@ -11,7 +11,9 @@ struct Square_root_invalid : public std::exception {
 
 double square_root(const double d) {
   // test the pre-conditions
-
+//You should try to play around with this, probably can't fully understand it
+//AP_ERROR is a macro (written by the previous lecturer. AP stands for Advanced Programming)
+//You can find it in the include dir
   AP_ERROR(d >= 0 && d <= 50, Square_root_invalid)
       << "In our library the argument must be positive and less or equal than "
          "50.\n\nYou passed "

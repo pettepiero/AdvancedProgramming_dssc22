@@ -1,7 +1,7 @@
  
 #include <cmath>
 #include <iostream>
-
+//This is ok because we just need the empty constructor for the example
 struct Negative_number {};
 
 struct Bigger_than_expected {};
@@ -31,7 +31,7 @@ int main() {
     std::cerr << "The square root of a negative number is a complex number.\n"
                  "square_root() is "
               << "limited to handle positive double numbers.\n";
-    return 1;
+    return 1; //What's the difference with exit(1)
   } catch (const Bigger_than_expected) {
     std::cerr << "The function square_root has been called with a parameter "
                  "greater than 50.\n"

@@ -11,12 +11,12 @@ CFLAGS= -c -I$(INCDIR)
 #hello.x is the "target", followed by the "dependencies" that should exist before the target is made
 #the following line is the "rule" to make the target. You have to tab the rule line
 #you can think of "$(CC)" as "g++"
-hello.x: main.o hello.o
-	$(CC) main.o hello.o -o hello.x
+hello.x: main.o obj/hello.o
+	$(CC) main.o obj/hello.o -o hello.x
 #these explain how to make the main.o file
 main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp"
-src/hello.o: src/hello.cpp
+	$(CC) $(CFLAGS) main.cpp
+obj/hello.o: src/hello.cpp
 	$(CC) $(CFLAGS) src/hello.cpp
 #this line will not be executed by default
 #maybe if you type clean it will be executed

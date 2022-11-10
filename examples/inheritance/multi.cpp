@@ -9,6 +9,7 @@ private:
     int b;
 public: 
     Colour(){};
+    //Note: with this constructor, the order is important -> has to be the same
     Colour(const int& r0, const int& g0, const int& b0):r(r0),g(g0),b(b0){};
     void set_colour(const int& r0, const int& g0, const int& b0){
         r=r0; g=g0; b=b0;
@@ -40,6 +41,8 @@ class Rectangle: public Polygon, public Colour {
 //one angle is 90
 class Triangle: public Polygon, public Colour {
   public:
+  //These are constructors. We are going to initialize the values of the base class in here
+  //If you put the constructor in the parent, you have to put it in the child
     Triangle():Colour(){};  
     Triangle(const int& r0, const int& g0, const int& b0):Colour(r0,g0,b0){};  
     int area(){ 
