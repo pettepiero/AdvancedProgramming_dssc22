@@ -12,7 +12,7 @@ class Polygon {
       { width=a; height=b; }
    virtual int area (){ return 0; }
   // virtual int area ()=0;//makes the class abstract, then you can't have an object of it
-    //pure virtual functions must be overriden, otherwise the child class is also abstract
+    //pure virtual functions must be overwritten, otherwise the child class is also abstract
 
     //Try to uncomment 
     //+audio 16:45

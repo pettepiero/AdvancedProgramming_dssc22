@@ -53,11 +53,13 @@ class Triangle: public Polygon, public Colour {
 int main () {
   Rectangle rect;
   Triangle trgl;
+  Triangle trgl2 = Triangle(2,45,65);
   rect.set_values(4,5);
   trgl.set_values(4,5);
   //rect.height=10; //won't work with "protected" member
   rect.set_colour(10,233,30);
   rect.print_colour();
+  trgl2.print_colour();
   std::cout << rect.area() << std::endl;
   std::cout << trgl.area() << std::endl;
   return 0;

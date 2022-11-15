@@ -6,7 +6,7 @@ class CBase1{
 public:    
     T field1; 
     CBase1(const T& f0):field1(f0){};
-   // virtual 
+    virtual 
     ~CBase1(){std::cout<<"base dctor called"<<std::endl;};
 
     //remember to make the destructor virtual
@@ -21,7 +21,7 @@ public:
         field2=f0;
         arr=new int[10];
     };
-   ~CDerived1(){delete[] arr; std::cout<<"derived dctor called"<<std::endl;}
+   ~CDerived1() {delete[] arr; std::cout<<"derived dctor called"<<std::endl;}
 };
 
 
@@ -36,6 +36,6 @@ int main(){
  CDerived1<int>* c1 = new CDerived1<int>(12);
  CBase1<int>* ptr=c1;
  delete ptr;
- 
+ //delete c1;
  return 0;   
 } 
