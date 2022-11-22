@@ -7,8 +7,8 @@ int main( int argc, char *argv[] ){
     
     //you can check if the user forgot to pass an expected parameter:
     if (argc<2){
-        std::cout<<"USAGE: "<<argv[0]<<" SOME NUMBERS"<<std::endl;
-        
+        std::cerr<<"USAGE: "<<argv[0]<<" SOME NUMBERS"<<std::endl;
+        exit(1);
     }
     
     for (int i=0;i<argc;i++){

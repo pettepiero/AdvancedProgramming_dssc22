@@ -1,5 +1,7 @@
 #include <iostream>
+//*************************************************************
 #include <string>
+//*************************************************************
 
 int main () {
 
@@ -8,7 +10,8 @@ int main () {
    std::string str3;
    int  len ;
 
-   // copy str1 into str3
+   // copy str1 into str3 (equal operator has been overloaded for strings)
+   //this is a deep copy
    str3 = str1;
    std::cout << "str3 : " << str3 << std::endl;
 

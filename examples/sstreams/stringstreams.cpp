@@ -1,9 +1,12 @@
 #include <string>
+//*************************************************************
 #include <sstream> //stingstreams
+//*************************************************************
 #include <iostream>
 
 int main(){
     int a{90};
+    //we have a stream which is a bunch of strings
     std::ostringstream ss;
     ss<<a<<" + " <<a;
     //how to get the string from the stream
@@ -14,7 +17,7 @@ int main(){
     
     int n;
  
-    // Stream a number till white space is encountered
+    // Stream a thing till white space is encountered
     ss2 >> n;
  
     // Print the number

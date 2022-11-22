@@ -3,7 +3,7 @@
 #include <memory>
 
 //const -> it is not allowed to change the variable
-//noexcept -> tells the compiler that ?
+//noexcept -> tells the compiler that what() doesn't throw exceptions
 
 class CMyException: public std::exception{
   const char* what() const noexcept override{
@@ -14,7 +14,7 @@ class CMyException: public std::exception{
 int main(){
 // throw 999; //if you don't catch it'll call std::terminate   
   try{
-    throw 777;
+    throw 3;
   }
   catch (int excep){
     std::cout << "Caught Exception  " << excep << '\n';

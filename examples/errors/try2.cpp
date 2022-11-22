@@ -1,4 +1,3 @@
- 
 #include <cmath>
 #include <iostream>
 //This is ok because we just need the empty constructor for the example

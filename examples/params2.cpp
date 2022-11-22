@@ -1,6 +1,8 @@
 #include <sstream>
 #include <iostream>
+//*****************************************************************
 #include <getopt.h>
+//*****************************************************************
 
 //play around with this file and see what passing different "wrong" things does
 

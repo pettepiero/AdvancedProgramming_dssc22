@@ -1,4 +1,6 @@
+/***********************************************/
 #include <chrono>
+/***********************************************/
 #include <iostream>
 #include <thread> //the easiest platform-independent way to make your program sleep
 
@@ -6,6 +8,7 @@ int main(){
     
     std::chrono::time_point<std::chrono::steady_clock> t_start;
     
+    //steady_clock is the name of a clock. There is also system_clock
     t_start = std::chrono::steady_clock::now();//we could just use auto
     
     //the easiest platform-independent way to make your program sleep

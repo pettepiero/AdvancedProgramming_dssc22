@@ -1,9 +1,12 @@
 #include <iostream>
+//*************************************************************
 #include <cstring>
+//*************************************************************
 
 int main () {
 
-    //things in " " are already null-terminated
+    //things in " " are already null-terminated!!
+    //Make sure you understand the difference between char arrays and strings
    char str1[10] = "Hello";
    char str2[10] = "World";
    char str3[10];
